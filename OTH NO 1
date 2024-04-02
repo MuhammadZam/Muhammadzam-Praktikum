@@ -7,8 +7,10 @@ typedef struct Node {
 
 int main() {
   
+  // Deklarasi variabel node l1 sampai l9
   Node l1, l2, l3, l4, l5, l6, l7, l8, l9;
 
+  // Inisialisasi node l1 sampai l9 dengan NULL untuk link dan karakter yang ditentukan
   l1.link = NULL;
   l1.alphabet = 'F';
 
@@ -36,6 +38,7 @@ int main() {
   l9.link = NULL;
   l9.alphabet = 'R';
 
+  // Mengatur pointer link untuk membentuk link list dengan urutan yang diinginkan
   l1.link = &l8;
   l8.link = &l2;
   l2.link = &l5;
@@ -46,6 +49,7 @@ int main() {
   l4.link = &l7;
   l7.link = &l1;
 
+  // Mencetak beberapa karakter dari link list
   printf("%c", l3.link->link->link->alphabet);
   printf("%c", l3.link->link->link->link->alphabet);
   printf("%c", l3.link->link->link->link->link->alphabet);
